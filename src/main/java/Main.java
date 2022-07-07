@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String args[])
     {
@@ -5,7 +7,11 @@ public class Main {
         System.out.println(BookSingleton.getBook());
 
         System.out.println("get factory book object");
-        for(int i = 0 ; i < 3; i++)
+        int numberOfObj = 3;
+        System.out.println("enter a number between 1 and 10");
+        Scanner sc  = new Scanner(System.in);
+        numberOfObj = sc.nextInt();
+        for(int i = 0 ; i < numberOfObj; i++)
         try
         {
             System.out.println(BookFactory.getNewBooks());
